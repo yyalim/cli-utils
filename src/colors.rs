@@ -67,7 +67,7 @@ pub enum Color {
     Red,
     Green,
     Blue,
-    Bold
+    Bold,
 }
 
 /// Struct representing a string with a color
@@ -93,19 +93,19 @@ pub enum Color {
 pub struct ColorString {
     pub color: Color,
     pub string: String,
-    pub colorized: String
+    pub colorized: String,
 }
 
 impl ColorString {
-  pub fn paint(&mut self) {
-     match self.color {
-         Color::Red => self.colorized = red(&self.string),
-         Color::Green => self.colorized = green(&self.string),
-         Color::Blue => self.colorized = blue(&self.string),
-         Color::Bold => self.colorized = bold(&self.string),
-     }
-  }
-  pub fn reset(&mut self) {
-      self.colorized = reset(&self.string);
-  }
+    pub fn paint(&mut self) {
+        match self.color {
+            Color::Red => self.colorized = red(&self.string),
+            Color::Green => self.colorized = green(&self.string),
+            Color::Blue => self.colorized = blue(&self.string),
+            Color::Bold => self.colorized = bold(&self.string),
+        }
+    }
+    pub fn reset(&mut self) {
+        self.colorized = reset(&self.string);
+    }
 }

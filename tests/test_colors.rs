@@ -1,11 +1,11 @@
-use cli_utils::colors::{ ColorString, Color };
+use cli_utils::colors::{Color, ColorString};
 
 #[test]
 fn test_red_coloring() {
     let mut color_string = ColorString {
         color: Color::Red,
         string: "Hello".to_string(),
-        colorized: "".to_string()
+        colorized: "".to_string(),
     };
 
     color_string.paint();

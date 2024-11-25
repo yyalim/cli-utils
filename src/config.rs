@@ -42,7 +42,7 @@ pub enum LogOutput {
 pub struct Logging {
     pub enabled: bool,
     pub level: LogLevel,
-    pub destination: LogOutput
+    pub destination: LogOutput,
 }
 
 impl Logging {
